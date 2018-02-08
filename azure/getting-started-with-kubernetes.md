@@ -59,18 +59,17 @@ The script is below:
 curl -L https://github.com/Azure/acs-engine/releases/download/v0.12.5/acs-engine-v0.12.5-darwin-amd64.tar.gz | tar xz
 mv acs-engine-v0.12.5-darwin-amd64/ /usr/local/opt/acs-engine/
 sudo ln -s /usr/local/opt/acs-engine/acs-engine /usr/local/bin/acs-engine
+```
 
+Confirm that acs-engine is installed:
+
+```
+acs-engine version
 ```
 
 #### Windows
 
-1. First, ensure that you are using an administrative shell (PowerShell).
-Copy the text specific to your command shell - cmd.exe or powershell.exe.
-2. Paste the copied text into your shell and press Enter.
-3. Wait a few seconds for the command to complete.
-4. If you don't see any errors, you are ready to use acs-engine
-
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; 
-System.Net.WebClient.DownloadFile('https://github.com/Azure/acs-engine/releases/download/v0.12.5/acs-engine-v0.12.5-windows-amd64.zip')
-```
+1. First, go to the [acs-engine release](https://github.com/Azure/acs-engine/releases) on GitHub and download the Windows specific zip.
+2. Next, unzip it and put the contents in `"C:\ProgramData\acs-engine"`
+3. Update your PATH environment variable to include the install location
+4. open a PowerShell console and type `acs-engine version` to confirm installation
