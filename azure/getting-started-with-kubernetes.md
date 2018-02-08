@@ -1,6 +1,6 @@
 
 
-# Getting started with Kubernetes on Azure
+# Kubernetes On Azure
 
 Here are instructions on how to kickstart your work with Kubernetes on Azure. The information here will help get your local environment environment setup with all the necessary tools.
 
