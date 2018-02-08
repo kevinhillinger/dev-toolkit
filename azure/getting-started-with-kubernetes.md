@@ -4,20 +4,16 @@
 
 Here are instructions on how to kickstart your work with Kubernetes on Azure. The information here will help get your local environment environment setup with all the necessary tools.
 
-# Baseline Requirements
+## Before using Azure
 
-To start, you're going to need the following prerequisites:
+To use Azure, you're going to need the following prerequisites:
 
-* An Azure Subscription with Owner access (either for the subscription or a resource group)
-* Azure CLI
-* 
+* An Azure Subscription 
+* Owner access (either for the subscription or a resource group)
 
-## Access to an Azure Subscription
-You will need an Azure subscription either globally or via a Resource Group assigned to you from your organization to create the necessary cloud resources for Kubernetes.
+# Tools
 
-_To create and destroy, you're going to need the `owner` role._
-
-## Azure CLI
+## 1. Azure CLI
 
 [Source documentation](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
@@ -35,9 +31,7 @@ If you don't have Brew, [install homebrew](https://docs.brew.sh/Installation.htm
 ### Windows
 For Windows users, go to the [documentation](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest) and follow the instructions for installing through an MSI.
 
-# Container / Kubernetes
-
-## ACS Engine
+## 2. ACS Engine
 
 Source: [GitHub repository](https://github.com/Azure/acs-engine) 
 
@@ -73,3 +67,13 @@ acs-engine version
 2. Next, unzip it and put the contents in `"C:\ProgramData\acs-engine"`
 3. Update your PATH environment variable to include the install location
 4. open a PowerShell console and type `acs-engine version` to confirm installation
+
+## 3. kubectl
+
+It's the assumption that you already are using Kubernetes. If not, you're going to need to install `kubectl'. To do this, either follow
+the instructions in [the official documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/) or, after installing
+the Azure CLI, execute the following command:
+
+```
+az acs kubernetes install-cli
+```
