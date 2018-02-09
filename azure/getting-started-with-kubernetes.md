@@ -77,3 +77,7 @@ the Azure CLI, execute the following command:
 ```
 az acs kubernetes install-cli
 ```
+
+# More Resources
+
+1. [Beyond Kubernetes Basics](1-beyond-kubernetes-basics.md)
